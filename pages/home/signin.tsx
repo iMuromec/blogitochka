@@ -118,14 +118,22 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         ? `${session?.user?.site}/lk`
         : "/";
 
+      console.log("context.req.headers.host", context.req.headers.host);
+      console.log("context.req.url", context.req.url);
+
       const url = new URL(`${context.req.headers.host}${context.req.url}`);
+
+      console.log("url", url);
+
       const callbackUrl = url?.searchParams?.get("callbackUrl");
 
       const destination = callbackUrl || redirectUrl;
 
+      console.log("destination", destination);
+
       return { redirect: { destination, permanent: false } };
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   }
 
