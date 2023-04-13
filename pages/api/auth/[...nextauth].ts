@@ -67,12 +67,12 @@ export const authOptions: NextAuthOptions = {
         // By design, domain names must have at least two dots; otherwise the browser will consider them invalid (https://stackoverflow.com/a/1188145).
 
         // When working on localhost Run: npx next dev -H localhost.site
+        domain: `.${process?.env?.HOST?.replace(":3000", "")}`,
+
         // or
-        // The cookie domain must be omitted entirely
-        // domain: VERCEL_DEPLOYMENT ? ".vercel.pub" : undefined,
-        domain: VERCEL_DEPLOYMENT
-          ? ".vercel.pub"
-          : `.${process?.env?.HOST?.replace(":3000", "")}`,
+        // The cookie domain must be omitted entirely:
+        // domain: !VERCEL_DEPLOYMENT && undefined,
+
         secure: VERCEL_DEPLOYMENT,
       },
     },
