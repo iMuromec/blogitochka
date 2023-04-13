@@ -51,7 +51,7 @@ export const ListItem = ({
           dangerouslySetInnerHTML={{ __html: cleanHtml(item?.content ?? "") }}
         ></span>
       </div>
-      {item?.items?.length > 0 && (
+      {item?.items && item?.items?.length > 0 && (
         <ListBlock
           className=""
           alignment={alignment}
