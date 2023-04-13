@@ -123,6 +123,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
       const destination = callbackUrl || redirectUrl;
 
+      console.log(url, callbackUrl, destination);
+
       return { redirect: { destination, permanent: false } };
     } catch (error) {
       console.log(error);
