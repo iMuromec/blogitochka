@@ -1,0 +1,340 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.44rem;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 0.96rem;
+  font-weight: 400;
+}
+
+/* Reduce header size on mobile */
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+.post-area pre {
+  line-height: 1.45;
+  font-size: 85%;
+  white-space: break-spaces;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+}
+
+pre code {
+  font-size: 85%;
+}
+
+.cdx-block.cdx-quote {
+  font-style: italic;
+}
+
+.post-area p b,
+blockquote b {
+  font-weight: bold;
+}
+
+.post-area p a {
+  text-decoration: underline;
+}
+
+.ce-block__content {
+  max-width: unset;
+}
+
+.image-tool--withBackground .image-tool__image {
+  padding: initial !important;
+}
+
+.image-block img,
+.ce-tune-alignment--left .image-tool__image-picture,
+.ce-tune-alignment--center .image-tool__image-picture,
+.ce-tune-alignment--right .image-tool__image-picture {
+  margin: initial !important;
+}
+
+.img-left,
+.ce-tune-alignment--left .image-tool__image {
+  display: flex;
+  justify-content: left;
+}
+.img-center,
+.ce-tune-alignment--center .image-tool__image {
+  display: flex;
+  justify-content: center;
+}
+.img-right,
+.ce-tune-alignment--right .image-tool__image {
+  display: flex;
+  justify-content: right;
+}
+
+.editor-area,
+.post-area > :not(img):not(.image-block),
+.ce-block__content > :not(.cdx-simple-image):not(.image-tool) {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.image-tool__image-picture,
+/* .image-block img:not(.w-full), */
+.ce-block__content
+  > :not(.image-tool):not(.image-tool--stretched):not(.cdx-checklist) {
+  width: 100%;
+  max-width: 760px !important;
+}
+
+.ce-block__content .image-tool--stretched .image-tool__image-picture {
+  width: 100%;
+  max-width: inherit !important;
+}
+
+.ce-block__content .image-tool__image {
+  border-radius: unset;
+  margin: initial;
+}
+
+.cdx-input.image-tool__caption,
+.cdx-input.cdx-quote__caption,
+.cdx-simple-image__caption {
+  display: none;
+}
+
+.codex-editor img,
+.post-area img {
+  margin: 0 auto;
+}
+
+.post-area img:not(.w-full) {
+  width: auto;
+  height: auto;
+}
+
+.post-area .center {
+  text-align: center;
+}
+
+.post-area .right,
+.text-right {
+  text-align: right;
+}
+
+.post-area .left {
+  text-align: left;
+}
+
+.cdx-block {
+  padding: 0;
+}
+
+.image-tool--withBorder .image-tool__image {
+  border: none !important;
+}
+.image-tool--withBorder .image-tool__image img,
+.with-border {
+  padding: 5px;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+}
+
+.ce-toolbar {
+  display: block !important;
+}
+
+.ce-toolbar__content {
+  max-width: 760px;
+}
+
+.ce-toolbar__actions {
+  opacity: 1 !important;
+  background: black;
+  border: 1px;
+  border-radius: 5px;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+  color: white;
+  background-color: black;
+}
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.ce-toolbar__settings-btn {
+  display: inline-flex !important;
+}
+
+/* Checkbox Basic styling */
+
+.cdx-checklist__item-text {
+  padding: 0 !important;
+}
+
+.cdx-checklist__item--checked .cdx-checklist__item-checkbox {
+  background: dodgerblue !important;
+  border-color: dodgerblue !important;
+}
+
+.checkbox [type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  color: dodgerblue;
+  vertical-align: middle;
+  appearance: none;
+  background: none;
+  border: 0;
+  outline: 0;
+  flex-grow: 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: background 300ms;
+  cursor: pointer;
+}
+
+/* Pseudo element for check styling */
+
+.checkbox [type="checkbox"]::before {
+  content: "";
+  color: transparent;
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  border: 0;
+  background-color: transparent;
+  background-size: contain;
+  box-shadow: inset 0 0 0 1px #ccd3d8;
+}
+
+/* Checked */
+
+.checkbox [type="checkbox"]:checked {
+  background-color: currentcolor;
+}
+
+.checkbox [type="checkbox"]:checked::before {
+  box-shadow: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23fff'/%3E %3C/svg%3E");
+}
+
+.ce-header {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1.6 !important;
+}
+
+.article::after {
+  content: "";
+  display: block;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.06))
+    center center/cover no-repeat;
+  z-index: 2;
+  border-radius: 4px;
+  position: absolute;
+  pointer-events: none;
+  -webkit-border-radius: 4px;
+  top: 0;
+  left: 0;
+}
+
+.site-description h1 {
+  font-size: 3rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+
+.site-description {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.new-site button {
+  justify-content: center;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 20px;
+  --tw-shadow-color: rgb(31 41 55 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+    0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.new-site .host-site,
+.new-site input {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
