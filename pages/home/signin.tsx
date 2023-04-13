@@ -113,14 +113,20 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   // Note: Make sure not to redirect to the same page
   // To avoid an infinite loop!
   if (session) {
-    const redirectUrl = session?.user?.site ? `${session?.user?.site}/lk` : "/";
+    try {
+      const redirectUrl = session?.user?.site
+        ? `${session?.user?.site}/lk`
+        : "/";
 
-    const url = new URL(`${context.req.headers.host}${context.req.url}`);
-    const callbackUrl = url?.searchParams?.get("callbackUrl");
+      const url = new URL(`${context.req.headers.host}${context.req.url}`);
+      const callbackUrl = url?.searchParams?.get("callbackUrl");
 
-    const destination = callbackUrl || redirectUrl;
+      const destination = callbackUrl || redirectUrl;
 
-    return { redirect: { destination } };
+      return { redirect: { destination, permanent: false } };
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   const url = new URL(context.req.url || "/", process.env.NEXTAUTH_URL);
