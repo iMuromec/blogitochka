@@ -52,22 +52,22 @@ cp .env.example .env
 
 4. Настройка поддоменов
 
-   **Настройка поддоменов на Vercel:**
+**Настройка поддоменов на Vercel:**
 
-   https://vercel.com/guides/nextjs-multi-tenant-application#5.-deploy-to-vercel
+https://vercel.com/guides/nextjs-multi-tenant-application#5.-deploy-to-vercel
 
-   **Если вы работаете локально, то поддомены нужно добавить вручную:**
+**Если вы работаете локально, то поддомены нужно добавить вручную:**
 
-   В:
+В:
 
-   - Mac/Linux - /etc/hosts
-   - Windows - C:\Windows\System32\Drivers\etc\hosts
+- Mac/Linux - /etc/hosts
+- Windows - C:\Windows\System32\Drivers\etc\hosts
 
-   Добавить:
+Добавить:
 
-   - 127.0.0.1 localhost.site
-   - 127.0.0.1 test.localhost.site
-   - 127.0.0.1 test2.localhost.site
+- 127.0.0.1 localhost.site
+- 127.0.0.1 test.localhost.site
+- 127.0.0.1 test2.localhost.site
 
 5. Запустите миграцию, чтобы создать бд с помощью Prisma Migrate:
 
@@ -85,7 +85,7 @@ datasource db {
 Затем запустить миграцию:
 
 ```bash
-   npx prisma migrate dev
+npx prisma migrate dev
 ```
 
 5. Запустить сервер:

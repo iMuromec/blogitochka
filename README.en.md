@@ -11,6 +11,8 @@ Multi-Tenant SaaS App with Custom Subdomains Using Next.js
 > **Warning**
 > This is a demo project
 
+<br />
+
 ## Demo
 
 **[demo.blogitochka.ru](https://demo.blogitochka.ru/)**
@@ -62,22 +64,22 @@ cp .env.example .env
 
 4. Setup subdomains
 
-   **Howto setup wildcard subdomains and deploy to Vercel:**
+**Howto setup wildcard subdomains and deploy to Vercel:**
 
-   https://vercel.com/guides/nextjs-multi-tenant-application#5.-deploy-to-vercel
+https://vercel.com/guides/nextjs-multi-tenant-application#5.-deploy-to-vercel
 
-   **if you run on localhost add subdomains manually:**
+**if you run on localhost add subdomains manually:**
 
-   In:
+In:
 
-   - Mac/Linux - /etc/hosts
-   - Windows - C:\Windows\System32\Drivers\etc\hosts
+- Mac/Linux - /etc/hosts
+- Windows - C:\Windows\System32\Drivers\etc\hosts
 
-   Add:
+Add:
 
-   - 127.0.0.1 localhost.site
-   - 127.0.0.1 test.localhost.site
-   - 127.0.0.1 test2.localhost.site
+- 127.0.0.1 localhost.site
+- 127.0.0.1 test.localhost.site
+- 127.0.0.1 test2.localhost.site
 
 5. Run a migration to create database with Prisma Migrate:
 
@@ -95,7 +97,7 @@ datasource db {
 Then:
 
 ```bash
-   npx prisma migrate dev
+npx prisma migrate dev
 ```
 
 6. Start the development server:
