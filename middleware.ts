@@ -22,7 +22,7 @@ const middleware: NextMiddleware = (req) => {
   const path = url.pathname;
 
   // rewrite root application to `/home` folder
-  if (hostname === process.env.HOST) {
+  if (hostname === process.env.HOST || hostname === process.env?.VERCEL_URL) {
     return NextResponse.rewrite(new URL(`/home${path}`, req.url));
   }
 
