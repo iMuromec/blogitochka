@@ -40,8 +40,8 @@ const middleware: NextMiddleware = (req) => {
       */
 
   const currentHost = (hostname ?? "")
-    .replace(`.vercel.pub`, "")
-    .replace(`.${process.env.VERCEL_SUB}.vercel.app`, "")
+    .replace(`.${process.env?.VERCEL_URL?.split(".").slice(-2).join(".")}`, "") // remove subdomain
+    .replace(`.${process.env.VERCEL_URL}`, "")
     .replace(`.${process.env.HOST}`, "");
 
   req.headers.set("currentHost", currentHost);
