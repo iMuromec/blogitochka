@@ -54,6 +54,9 @@ h6 {
   h4 {
     font-size: 1.25rem;
   }
+  .post-area img:not(.w-full) {
+    max-width: 100% !important;
+  }
 }
 
 .post-area pre {
@@ -115,7 +118,7 @@ blockquote b {
 .editor-area,
 .post-area > :not(img):not(.image-block),
 .ce-block__content > :not(.cdx-simple-image):not(.image-tool) {
-  width: 100%;
+  /* width: 100%; */
   max-width: 760px;
   margin: 0 auto;
   padding: 0 20px;
@@ -125,7 +128,7 @@ blockquote b {
 /* .image-block img:not(.w-full), */
 .ce-block__content
   > :not(.image-tool):not(.image-tool--stretched):not(.cdx-checklist) {
-  width: 100%;
+  /* width: 100%; */
   max-width: 760px !important;
 }
 
@@ -153,6 +156,7 @@ blockquote b {
 .post-area img:not(.w-full) {
   width: auto;
   height: auto;
+  max-width: 760px;
 }
 
 .post-area .center {
