@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import YandexMetrika from "@/components/YandexMetrika";
+import { hostSite } from "@/config/host";
 
 export default function Document() {
   return (
@@ -8,7 +9,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <YandexMetrika yid="93195596" />
+        <YandexMetrika yid={hostSite.YandexMetrikaId} />
       </body>
     </Html>
   );

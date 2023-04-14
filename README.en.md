@@ -60,7 +60,7 @@ npm i
 cp .env.example .env
 ```
 
-3. Change or delete Yandex Metrika in `/pages/_document.tsx`
+3. Update config file `/config/host.ts`
 
 4. Setup subdomains
 

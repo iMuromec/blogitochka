@@ -6,4 +6,5 @@ export const hostSite = {
   logoSrc: `${hostUrl}static/logo.png`,
   name: "Блог — и точка",
   url: hostUrl,
+  YandexMetrikaId: 93195596,
 };
