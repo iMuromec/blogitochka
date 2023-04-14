@@ -23,7 +23,8 @@ const middleware: NextMiddleware = (req) => {
 
   // rewrite root application to `/home` folder
   if (hostname === process.env.HOST || hostname === process.env?.VERCEL_URL) {
-    return NextResponse.rewrite(new URL(`/home${path}`, req.url));
+    const { search } = new URL(req.url);
+    return NextResponse.rewrite(new URL(`/home${path}${search}`, req.url));
   }
 
   /*  You have to replace ".vercel.pub" with your own domain if you deploy this example under your domain.
