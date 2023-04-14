@@ -88,7 +88,7 @@ datasource db {
 npx prisma migrate dev
 ```
 
-5. Запустить сервер:
+6. Запустить сервер:
 
 ```bash
 npm run dev

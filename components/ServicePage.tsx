@@ -31,7 +31,8 @@ export default function Layout({
       </Head>
       <div
         className={`${
-          withBg && "bg-[url('/static/background.jpg')] bg-cover h-screen"
+          withBg &&
+          "bg-[url('/static/background.jpg')] bg-[#84dced] bg-cover h-screen"
         }`}
       >
         <div

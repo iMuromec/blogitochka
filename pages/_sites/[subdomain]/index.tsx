@@ -27,9 +27,8 @@ export default function IndexPage({
   site,
 }: IndexPageProps) {
   const limit = 10;
-  const siteDesc = DOMPurify.sanitize(
-    marked.parse(cleanHtml(site?.description || ""))
-  );
+  const cleanDesc = cleanHtml(site?.description || "").trim();
+  const siteDesc = DOMPurify.sanitize(marked.parse(cleanDesc));
 
   const searchRef = useRef<HTMLInputElement>(null);
 
@@ -67,7 +66,7 @@ export default function IndexPage({
     <Layout
       meta={{
         title: `Записи в блоге ${site?.name}`,
-        description: site?.description || `Записи в блоге ${site?.name}`,
+        description: cleanDesc || `Записи в блоге ${site?.name}`,
       }}
     >
       <div className="container gap-5 flex flex-col w-full px-5 mx-auto">

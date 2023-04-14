@@ -15,7 +15,7 @@ export default function IndexPage() {
   return (
     <>
       <Head>
-        <title>{`Создать свой ${hostSite.name}`}</title>
+        <title>{`Создать ${hostSite.name}`}</title>
         <meta
           name="description"
           content={`Создать свой блог на сайте "${hostSite.name}"`}
