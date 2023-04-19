@@ -50,7 +50,9 @@ export async function createSite(
   try {
     const data = JSON.parse(body);
 
-    data.subdomain = data.subdomain?.replace(/[^a-zA-Z0-9/-]+/g, createId());
+    data.subdomain = data.subdomain
+      ?.replace(/[^a-zA-Z0-9/-]+/g, createId())
+      .toLowerCase();
 
     data.user = {
       connect: {
@@ -94,7 +96,9 @@ export async function updateSite(
     const data = JSON.parse(body);
 
     if (data?.subdomain) {
-      data.subdomain = data.subdomain?.replace(/[^a-zA-Z0-9/-]+/g, "");
+      data.subdomain = data.subdomain
+        ?.replace(/[^a-zA-Z0-9/-]+/g, "")
+        .toLowerCase();
       if (!data?.subdomain) return res.status(400).end();
     }
 
