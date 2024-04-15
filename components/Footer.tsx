@@ -8,7 +8,7 @@ export default function Footer() {
           <LogoHost.Image className="w-[20px] grayscale" />
           <LogoHost.Name className="text-sm font-light" />
         </LogoHost>
-        <div>|</div>
+        {/* <div>|</div>
         <p className="text-center text-sm md:text-left">
           Исходный код на{" "}
           <a
@@ -20,7 +20,7 @@ export default function Footer() {
             GitHub
           </a>
           .
-        </p>
+        </p> */}
       </div>
     </footer>
   );
