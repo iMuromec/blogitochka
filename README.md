@@ -6,16 +6,14 @@
 
 Блог-платформа с поддоменом для каждого сайта. Можно использовать как SaaS приложение.
 
-**[blogitochka.ru](https://blogitochka.ru/)**
+
 
 > **Warning**
 > Это демо проект, создан для ознакомления
 
 <br />
 
-## Пример
 
-**[demo.blogitochka.ru](https://demo.blogitochka.ru/)**
 
 ## Fullstack приложение:
 
