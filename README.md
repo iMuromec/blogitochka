@@ -1,4 +1,4 @@
-<img alt="Блог — и точка" src="https://blogitochka.ru/static/logo.png" width="130"/>
+<img alt="Блог — и точка" src="https://blogitochka.vercel.app/static/logo.png" width="130"/>
 
 # Блог — и точка
 
